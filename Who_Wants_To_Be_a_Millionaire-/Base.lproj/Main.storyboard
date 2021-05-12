@@ -103,33 +103,45 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="tAN-eF-ArO">
                                 <rect key="frame" x="16" y="264.5" width="382" height="165"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="b2P-IS-Qia">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="b2P-IS-Qia">
                                         <rect key="frame" x="0.0" y="0.0" width="382" height="30"/>
                                         <color key="backgroundColor" systemColor="labelColor"/>
                                         <state key="normal" title="Button">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="answerButtonTapped:" destination="AFc-jN-b6e" eventType="touchUpInside" id="KOZ-cD-hX4"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="M2t-kh-z80">
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="M2t-kh-z80">
                                         <rect key="frame" x="0.0" y="45" width="382" height="30"/>
                                         <color key="backgroundColor" systemColor="labelColor"/>
                                         <state key="normal" title="Button">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="answerButtonTapped:" destination="AFc-jN-b6e" eventType="touchUpInside" id="pxP-Us-HQK"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="k18-4h-NUW">
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="k18-4h-NUW">
                                         <rect key="frame" x="0.0" y="90" width="382" height="30"/>
                                         <color key="backgroundColor" systemColor="labelColor"/>
                                         <state key="normal" title="Button">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="answerButtonTapped:" destination="AFc-jN-b6e" eventType="touchUpInside" id="4Xd-cS-Yp3"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="Tn9-2e-has">
+                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="Tn9-2e-has">
                                         <rect key="frame" x="0.0" y="135" width="382" height="30"/>
                                         <color key="backgroundColor" systemColor="labelColor"/>
                                         <state key="normal" title="Button">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="answerButtonTapped:" destination="AFc-jN-b6e" eventType="touchUpInside" id="dHW-DT-cxL"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -147,6 +159,13 @@
                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="V2P-rX-4so" secondAttribute="trailing" id="mVB-ga-ptW"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="answerButton1" destination="b2P-IS-Qia" id="9y5-Uc-oZL"/>
+                        <outlet property="answerButton2" destination="M2t-kh-z80" id="Wip-hJ-1iA"/>
+                        <outlet property="answerButton3" destination="k18-4h-NUW" id="FIq-Pe-yiX"/>
+                        <outlet property="answerButton4" destination="Tn9-2e-has" id="qsA-z9-5MF"/>
+                        <outlet property="questionLabel" destination="V2P-rX-4so" id="F8v-FG-f1Z"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iOU-iB-Zh3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
