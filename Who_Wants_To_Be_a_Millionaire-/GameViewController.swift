@@ -7,10 +7,16 @@
 
 import UIKit
 
+protocol GameViewControllerDelegate: AnyObject {
+    func didEndGame(with score: Int, of total: Int)
+}
+
 class GameViewController: UIViewController {
     var score = 0
     var correctAnswer = 0
     var questionIndex = 0
+    
+    weak var delegate: GameViewControllerDelegate?
     
     var questions = [
             Question(question: "Что хором кричат дети на новогоднем празднике?",
@@ -45,18 +51,31 @@ class GameViewController: UIViewController {
             ac.title = title
             score += 1
             questionIndex += 1
-            ac.addAction(UIAlertAction(title: "Дальше", style: .default, handler: startGame))
-            present(ac, animated: true)
+            
+            if questionIndex < questions.count {
+                ac.addAction(UIAlertAction(title: "Дальше", style: .default, handler: startGame))
+                present(ac, animated: true)
+            } else {
+                ac.title = "Это был последний вопрос"
+                ac.addAction(UIAlertAction(title: "В меню", style: .default) {
+                    [weak self] _ in
+                    self?.navigationController?.popToRootViewController(animated: true)
+                })
+                present(ac, animated: true)
+                delegate?.didEndGame(with: score, of: questions.count)
+            }
             
         } else {
             title = "Неверный ответ"
-            questionIndex = 0
             ac.title = title
-            ac.addAction(UIAlertAction(title: "В меню", style: .default) { [weak self] _ in
+            ac.addAction(UIAlertAction(title: "В меню", style: .default) {
+                [weak self] _ in
                 self?.navigationController?.popToRootViewController(animated: true)
             })
             present(ac, animated: true)
+            delegate?.didEndGame(with: score, of: questions.count)
         }
+        
 
     }
     

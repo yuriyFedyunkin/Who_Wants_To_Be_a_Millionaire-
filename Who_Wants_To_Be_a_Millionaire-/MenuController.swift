@@ -17,11 +17,19 @@ class MenuController: UIViewController {
     
     @IBAction func startGame(_ sender: UIButton) {
         if let vc = storyboard?.instantiateViewController(identifier: "Game") as? GameViewController {
+            vc.delegate = self
             navigationController?.pushViewController(vc, animated: true)
         }
     }
     @IBAction func showResults(_ sender: UIButton) {
     }
-    
 
+}
+
+extension MenuController: GameViewControllerDelegate {
+    func didEndGame(with score: Int, of total: Int) {
+        Game.shared.session = GameSession(numberOfQuestions: score, correctAnswers: total)
+    }
+    
+    
 }

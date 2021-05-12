@@ -15,6 +15,8 @@
 		791FBB8C264C19F60020F96D /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791FBB8B264C19F60020F96D /* Question.swift */; };
 		791FBB90264C1F3C0020F96D /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791FBB8F264C1F3C0020F96D /* MenuController.swift */; };
 		791FBB94264C295A0020F96D /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791FBB93264C295A0020F96D /* GameViewController.swift */; };
+		791FBB97264C4CD40020F96D /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791FBB96264C4CD40020F96D /* Game.swift */; };
+		791FBB9A264C4D540020F96D /* GameSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791FBB99264C4D540020F96D /* GameSession.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		791FBB8B264C19F60020F96D /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		791FBB8F264C1F3C0020F96D /* MenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuController.swift; sourceTree = "<group>"; };
 		791FBB93264C295A0020F96D /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		791FBB96264C4CD40020F96D /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		791FBB99264C4D540020F96D /* GameSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSession.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +73,8 @@
 				791FBB8B264C19F60020F96D /* Question.swift */,
 				791FBB8F264C1F3C0020F96D /* MenuController.swift */,
 				791FBB93264C295A0020F96D /* GameViewController.swift */,
+				791FBB96264C4CD40020F96D /* Game.swift */,
+				791FBB99264C4D540020F96D /* GameSession.swift */,
 			);
 			path = "Who_Wants_To_Be_a_Millionaire-";
 			sourceTree = "<group>";
@@ -144,8 +150,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				791FBB94264C295A0020F96D /* GameViewController.swift in Sources */,
+				791FBB97264C4CD40020F96D /* Game.swift in Sources */,
 				791FBB90264C1F3C0020F96D /* MenuController.swift in Sources */,
 				791FBB8C264C19F60020F96D /* Question.swift in Sources */,
+				791FBB9A264C4D540020F96D /* GameSession.swift in Sources */,
 				791FBB77264C01180020F96D /* AppDelegate.swift in Sources */,
 				791FBB79264C01180020F96D /* SceneDelegate.swift in Sources */,
 			);
