@@ -8,11 +8,11 @@
 import UIKit
 
 protocol GameViewControllerDelegate: AnyObject {
-    func didEndGame(with score: Int, of total: Int)
+    func didEndGame(with session: GameSession?)
 }
 
 class GameViewController: UIViewController {
-    var score = 0
+    var gameSession: GameSession?
     var correctAnswer = 0
     var questionIndex = 0
     
@@ -49,7 +49,7 @@ class GameViewController: UIViewController {
         if sender.tag == correctAnswer {
             title = "Верно"
             ac.title = title
-            score += 1
+            gameSession?.correctAnswers! += 1
             questionIndex += 1
             
             if questionIndex < questions.count {
@@ -62,7 +62,7 @@ class GameViewController: UIViewController {
                     self?.navigationController?.popToRootViewController(animated: true)
                 })
                 present(ac, animated: true)
-                delegate?.didEndGame(with: score, of: questions.count)
+                delegate?.didEndGame(with: gameSession)
             }
             
         } else {
@@ -73,16 +73,13 @@ class GameViewController: UIViewController {
                 self?.navigationController?.popToRootViewController(animated: true)
             })
             present(ac, animated: true)
-            delegate?.didEndGame(with: score, of: questions.count)
+            delegate?.didEndGame(with: gameSession)
         }
-        
-
     }
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        gameSession = GameSession(numberOfQuestions: questions.count, correctAnswers: 0)
         startGame()
     }
     
@@ -98,6 +95,8 @@ class GameViewController: UIViewController {
 
    
 }
+
+
 /*
  1."Что хором кричат дети на новогоднем празднике?"
  - Спасите-помогие!

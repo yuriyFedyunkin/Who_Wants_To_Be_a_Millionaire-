@@ -18,17 +18,29 @@ class MenuController: UIViewController {
     @IBAction func startGame(_ sender: UIButton) {
         if let vc = storyboard?.instantiateViewController(identifier: "Game") as? GameViewController {
             vc.delegate = self
+            vc.gameSession = GameSession(numberOfQuestions: vc.questions.count, correctAnswers: 0)
+            Game.shared.session = vc.gameSession
             navigationController?.pushViewController(vc, animated: true)
         }
     }
     @IBAction func showResults(_ sender: UIButton) {
+        if let vc = storyboard?.instantiateViewController(identifier: "Results") as? ResultsViewController {
+            navigationController?.pushViewController(vc, animated: true)
+        }
     }
 
 }
 
 extension MenuController: GameViewControllerDelegate {
-    func didEndGame(with score: Int, of total: Int) {
-        Game.shared.session = GameSession(numberOfQuestions: score, correctAnswers: total)
+    func didEndGame(with session: GameSession?) {
+        Game.shared.session = session
+        
+        if let answers = Game.shared.session?.correctAnswers,
+           let questions = Game.shared.session?.numberOfQuestions {
+            let result = Double(answers) / Double(questions) * 100
+            Game.shared.results.append(Int(result))
+        }
+        
     }
     
     

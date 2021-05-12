@@ -11,6 +11,10 @@ class Game {
     static let shared = Game()
     
     var session: GameSession?
+   
+    var results = [Int]()
+    
     
     private init() {}
 }
+
