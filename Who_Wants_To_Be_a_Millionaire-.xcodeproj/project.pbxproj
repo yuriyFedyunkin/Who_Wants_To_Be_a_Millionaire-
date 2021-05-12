@@ -18,6 +18,7 @@
 		791FBB97264C4CD40020F96D /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791FBB96264C4CD40020F96D /* Game.swift */; };
 		791FBB9A264C4D540020F96D /* GameSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791FBB99264C4D540020F96D /* GameSession.swift */; };
 		791FBB9E264C65CE0020F96D /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791FBB9D264C65CE0020F96D /* ResultsViewController.swift */; };
+		791FBBA1264C70A90020F96D /* ResultsCaretaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791FBBA0264C70A90020F96D /* ResultsCaretaker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		791FBB96264C4CD40020F96D /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		791FBB99264C4D540020F96D /* GameSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSession.swift; sourceTree = "<group>"; };
 		791FBB9D264C65CE0020F96D /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
+		791FBBA0264C70A90020F96D /* ResultsCaretaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsCaretaker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,20 +68,37 @@
 		791FBB75264C01180020F96D /* Who_Wants_To_Be_a_Millionaire- */ = {
 			isa = PBXGroup;
 			children = (
-				791FBB76264C01180020F96D /* AppDelegate.swift */,
-				791FBB78264C01180020F96D /* SceneDelegate.swift */,
-				791FBB7C264C01180020F96D /* Main.storyboard */,
-				791FBB7F264C011B0020F96D /* Assets.xcassets */,
-				791FBB81264C011B0020F96D /* LaunchScreen.storyboard */,
-				791FBB84264C011B0020F96D /* Info.plist */,
+				791FBBA3264C778C0020F96D /* Fundamental */,
+				791FBBA4264C77C00020F96D /* Controllers */,
 				791FBB8B264C19F60020F96D /* Question.swift */,
-				791FBB8F264C1F3C0020F96D /* MenuController.swift */,
-				791FBB93264C295A0020F96D /* GameViewController.swift */,
 				791FBB96264C4CD40020F96D /* Game.swift */,
 				791FBB99264C4D540020F96D /* GameSession.swift */,
-				791FBB9D264C65CE0020F96D /* ResultsViewController.swift */,
+				791FBBA0264C70A90020F96D /* ResultsCaretaker.swift */,
+				791FBB7C264C01180020F96D /* Main.storyboard */,
+				791FBB81264C011B0020F96D /* LaunchScreen.storyboard */,
+				791FBB84264C011B0020F96D /* Info.plist */,
 			);
 			path = "Who_Wants_To_Be_a_Millionaire-";
+			sourceTree = "<group>";
+		};
+		791FBBA3264C778C0020F96D /* Fundamental */ = {
+			isa = PBXGroup;
+			children = (
+				791FBB76264C01180020F96D /* AppDelegate.swift */,
+				791FBB78264C01180020F96D /* SceneDelegate.swift */,
+				791FBB7F264C011B0020F96D /* Assets.xcassets */,
+			);
+			path = Fundamental;
+			sourceTree = "<group>";
+		};
+		791FBBA4264C77C00020F96D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				791FBB8F264C1F3C0020F96D /* MenuController.swift */,
+				791FBB93264C295A0020F96D /* GameViewController.swift */,
+				791FBB9D264C65CE0020F96D /* ResultsViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -155,6 +174,7 @@
 				791FBB94264C295A0020F96D /* GameViewController.swift in Sources */,
 				791FBB97264C4CD40020F96D /* Game.swift in Sources */,
 				791FBB90264C1F3C0020F96D /* MenuController.swift in Sources */,
+				791FBBA1264C70A90020F96D /* ResultsCaretaker.swift in Sources */,
 				791FBB8C264C19F60020F96D /* Question.swift in Sources */,
 				791FBB9A264C4D540020F96D /* GameSession.swift in Sources */,
 				791FBB77264C01180020F96D /* AppDelegate.swift in Sources */,

@@ -37,8 +37,9 @@ extension MenuController: GameViewControllerDelegate {
         
         if let answers = Game.shared.session?.correctAnswers,
            let questions = Game.shared.session?.numberOfQuestions {
-            let result = Double(answers) / Double(questions) * 100
-            Game.shared.results.append(Int(result))
+            let progress = Double(answers) / Double(questions) * 100
+            let result = Result(value: Int(progress), date: Date())
+            Game.shared.addResult(result)
         }
         
     }

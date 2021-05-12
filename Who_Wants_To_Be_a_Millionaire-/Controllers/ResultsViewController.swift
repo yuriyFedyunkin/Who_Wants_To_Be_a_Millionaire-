@@ -9,9 +9,14 @@ import UIKit
 
 class ResultsViewController: UITableViewController {
 
+    let dateFormatter: DateFormatter = {
+        let df = DateFormatter()
+        df.dateStyle = .short
+        return df
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -20,7 +25,8 @@ class ResultsViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Result", for: indexPath)
-        cell.textLabel?.text = "\(Game.shared.results[indexPath.row]) %"
+        let result = Game.shared.results[indexPath.row]
+        cell.textLabel?.text = dateFormatter.string(from: result.date) + " результат: \(result.value)%"
         cell.isUserInteractionEnabled = false
         return cell
     }

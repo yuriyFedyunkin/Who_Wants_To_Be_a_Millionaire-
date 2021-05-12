@@ -12,9 +12,27 @@ class Game {
     
     var session: GameSession?
    
-    var results = [Int]()
+    var results = [Result]() {
+        didSet {
+                resultsCaretaker.save(results: results)
+            }
+    }
     
+    private let resultsCaretaker = ResultsCaretaker()
     
-    private init() {}
+    private init() {
+        self.results = self.resultsCaretaker.retrieveResults()
+
+    }
+    
+    func addResult(_ result: Result) {
+        self.results.append(result)
+    }
+    
+}
+
+struct Result: Codable {
+    let value: Int
+    let date: Date
 }
 
