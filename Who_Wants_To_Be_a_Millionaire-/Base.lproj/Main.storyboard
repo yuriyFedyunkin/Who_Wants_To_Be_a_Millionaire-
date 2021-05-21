@@ -103,7 +103,22 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iJQ-SF-cVC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1819" y="595"/>
+            <point key="canvasLocation" x="1796" y="820"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="U1Q-Us-Kwa">
+            <objects>
+                <viewController id="8l6-u2-czk" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="82x-Nm-VV7">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="uBk-ve-8VW"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eno-qI-Hau" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1786" y="1549"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="4qD-vn-RS0">
@@ -206,7 +221,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iOU-iB-Zh3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1818.840579710145" y="-147.32142857142856"/>
+            <point key="canvasLocation" x="1796" y="78"/>
         </scene>
     </scenes>
     <resources>
